@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Node Assignment</title>
+	<link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
+	<link rel="stylesheet" href="index.css">
+
+</head>
+<body>
+	<header>
+		<h1>PROGRAM</h1>
+		<p>
+			The following website merges different types of data such country, city, continent, domain, coastline, flag, currency. This is achieved through using <strong>Node</strong> to provides resources that are stored using the <strong>JSON</strong> format. Resources are then accesssed using <strong>AJAX</strong> which when all data has been read, its render using the table. The website also implements effects using <strong>JQuery</strong> on buttons, which ehen click they provide functionality such as showing the first 20 rows or all rows of the table, hide or show the flags column, fadeIn or fadeOut the THead, SlideOut or SlideIn the currency column.
+		</p>
+		<h1>TECHNOLOGY USED</h1>
+		<p>Technologies used include:-<br><strong>JSON(JavaScript Object Notation)</strong> is a data structure used for storing and retrieving data. Data is stored using key and value format. JSON is light-weight and is also programming language independent since it follows the same format as dictionary in python, object in JavaScript and others.<br><strong>AJAX(Asynchronous JavaScript and XML)</strong> is a web technology used to provide resources through asynchronous communication, which means resources are provided only when ready. AJAX is mainly used in updating different section of the website without need for reloading the whole website.<br><strong>NODE</strong> is a backend JavaScript technology which is used in the implementation of the server, which provides resources for the frontend.<br><strong>JQUERY</strong> is a JavaScript library which provide functionality for writing JavaScript faster.</p>
+	</header>
+	<div id="read"></div>
+	<div id="finished"></div>
+	<div id="buttonDiv">
+		<button id="start-button"><i class="icon-expand-alt"></i> Load Files</button>
+		<button id="first20-button"><i class="icon-expand-alt"></i> Show All</button>
+		<button id="hide-albania-button"><i class="icon-expand-alt"></i> ToggleOut Albania</button>
+		<button id="fade-thead"><i class="icon-expand-alt"></i> FadeOut THead</button>
+		<button id="hide-flags"><i class="icon-expand-alt"></i> Hide Flags</button>
+		<button id="slide-currency"><i class="icon-expand-alt"></i> SlideOut Currency</button>
+		<button id="animate-thead"><i class="icon-expand-alt"></i> Animate THead</button>
+		<button id="fadeToggle-city"><i class="icon-expand-alt"></i> FadeToggle City</button>
+	</div>
+	
+	<div id="main-content"> </div>
+	<script src="https://code.jquery.com/jquery-3.6.3.min.js" integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
+	<script src="./scripts.js"></script>
+
+</body>
+</html>
