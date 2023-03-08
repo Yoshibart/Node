@@ -1,6 +1,8 @@
 const http = require('http');
 const fs = require('fs');
 const path = require('path');
+
+//The createServer accepts requests form the client (browser)
 const server = http.createServer((request, response) => {
 	let filePath = request.url;
 	switch(filePath){
@@ -18,6 +20,8 @@ const server = http.createServer((request, response) => {
 			filePath = filePath.includes('/country-objects') ? `.${filePath}` : `./country-objects${filePath}`;
 	}
 	console.log(filePath)
+
+	//Specifies the specific file content type
 	const contentType = {
 	'.html': 'text/html',
 	'.json': 'application/json',
@@ -26,6 +30,7 @@ const server = http.createServer((request, response) => {
 	}[String(path.extname(filePath)).toLowerCase()];
 
 	fs.readFile(filePath, (err, data) => {
+	//checks for errorcode 404 to check whether the file doesnot exist
 	if (err) {
 		if (err.code === 'ENOENT') {
 			response.writeHead(404);
